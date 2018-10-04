@@ -9,7 +9,7 @@ void setup() {
 
 void draw(){
 
-  fill(#FFA005);
+  fill(#922Fa5);
   for (float i=0;i<PI*2;i+=2*PI/5) {
   ballX=width/2 + r*cos(i);
   ballY=height/2 + r*sin(i);
