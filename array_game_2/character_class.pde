@@ -1,10 +1,12 @@
 class Player {
   
-  int size;
+  int playSize;
+
 
   
   Player (int temp_size) {
-   size = temp_size; 
+   playSize = temp_size; 
+       
 
   }
   
@@ -12,14 +14,14 @@ class Player {
     
        int textsize = 200;
    textSize(textsize);
-   fill(60,80,100);
+   fill(35,55,75);
    text ("SURVIVE", textsize/2, height/2+textsize/5);
         
     noStroke ();
     fill (0,200,0);
-   ellipse (mouseX, mouseY, size, size); 
+   ellipse (mouseX, mouseY, playSize, playSize); 
        
   }
   
-  
+
 }

@@ -6,31 +6,33 @@ class Ball {
  float speed;
  float y;
  float x;
- float time;
+
+ 
   
- Ball (int temp_size, int temp_playerSize, float temp_time) {
+ Ball (int temp_size, int temp_playerSize) {
   size = temp_size; 
   playerSize = temp_playerSize;
-  time = temp_time;
+
  }
   
     void damage () {
     if (dist(mouseX,mouseY,x,y)<= playerSize/2+size/2) {
         background (80,0,0);
-      time = 0;
+      timer.time = 0;
     }
   }
   
   void spawn () {
-    float speedUp = 20;
+    float speedUp = 20;    
  
     if (respawn == true || y <= 0-size*5){
     x = random(size/2,width-size/2);
     y = height+(size/4) * 3;
     respawn = false;
-    speed = 0.2;
+    speed = 0.2 + timer.time/10;
     }
     
+        
     speed = speed + speed/speedUp;
     y = y-speed;
     
