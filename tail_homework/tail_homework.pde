@@ -1,4 +1,4 @@
-int num = 2000; //number of objects in tail
+int num = 50; //number of objects in tail
 int size = 30; //size of each color bubble
 Tail [] tail = new Tail [num]; //setting up an array of objects
 //positions of all objects in tail
